@@ -2,6 +2,11 @@
 const nextConfig = {
   experimental: {
     appDir: true,
+    serverComponentsExternalPackages: ["react-bootstrap"]
+  },
+  productionBrowserSourceMaps: true,
+  images: {
+      domains: ['localhost']
   },
 }
 
