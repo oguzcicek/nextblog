@@ -3,7 +3,8 @@ import AddComment from "./add-comment";
 import Head from "next/head";
 
 const getPost = async (postId) => {
-    const res = await fetch('http://localhost:3001/api/v1/posts/' + postId);
+    //const res = await fetch('http://localhost:3001/api/v1/posts/' + postId);
+    const res = await fetch('localhost:3001/api/v1/posts/' + postId);
     return res.json();
 }
 
