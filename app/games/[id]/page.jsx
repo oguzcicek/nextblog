@@ -3,7 +3,7 @@ import Pagination from './pagination'
 
 const getGameData = async (gameSlug, page) => {
     //const res = await fetch(`http://localhost:3001/api/v1/get_by_game/` + gameSlug + `?page=${page}` );
-    const res = await fetch(`127.0.0.1:3001/api/v1/get_by_game/` + gameSlug + `?page=${page}` );
+    const res = await fetch(`localhost:3001/api/v1/get_by_game/` + gameSlug + `?page=${page}` );
     return res.json();
 }
 
