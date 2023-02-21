@@ -4,7 +4,7 @@ import ReactDOM from 'react-dom';
 
 const getData = async (page) => {
     //const res = await fetch(`http://localhost:3001/api/v1/posts?page=${page}`);
-    const res = await fetch(`localhost:3001/api/v1/posts?page=${page}`);
+    const res = await fetch(`http://127.0.0.1:3001/api/v1/posts?page=${page}`);
     return res.json();
 }
 

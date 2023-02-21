@@ -3,7 +3,7 @@ import Pagination from './pagination'
 
 const getCategoryData = async (categorySlug, page) => {
     //const res = await fetch(`http://localhost:3001/api/v1/get_by_category/` + categorySlug + `?page=${page}` );
-    const res = await fetch(`localhost:3001/api/v1/get_by_category/` + categorySlug + `?page=${page}` );
+    const res = await fetch(`http://127.0.0.1:3001/api/v1/get_by_category/` + categorySlug + `?page=${page}` );
     return res.json();
 }
 
