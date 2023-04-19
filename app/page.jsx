@@ -1,11 +1,10 @@
 import Link from "next/link";
 import Pagination from "@/app/pagination";
-import ReactDOM from 'react-dom';
 
-const getData = async (page) => {
+const getData = async (page = 1) => {
     //const res = await fetch(`http://localhost:3001/api/v1/posts?page=${page}`);
     const res = await fetch(`http://127.0.0.1:3001/api/v1/posts?page=${page}`);
-    return res.json();
+    return await res.json();
 }
 
 export default async function Home(props) {

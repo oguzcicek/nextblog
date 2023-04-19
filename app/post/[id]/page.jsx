@@ -1,22 +1,32 @@
 import Image from 'next/image'
 import AddComment from "./add-comment";
-import Head from "next/head";
 
-const getPost = async (postId) => {
+export async function getStaticPaths() {
+    const res = await fetch('http://127.0.0.1:3001/api/v1/posts');
+    const { data } = await res.json();
+
+    return {
+        paths: data.map((post) => ({ params: { id: post.attributes?.slug } })),
+        fallback: false
+    }
+}
+
+const getData = async (id) => {
     //const res = await fetch('http://localhost:3001/api/v1/posts/' + postId);
-    const res = await fetch('http://127.0.0.1:3001/api/v1/posts/' + postId);
+    const res = await fetch('http://127.0.0.1:3001/api/v1/posts/' + id);
     return res.json();
 }
 
-export default async function PostPage({params}) {
-    const { data } = await getPost(params.id);
-    const comments = JSON.parse(data.attributes.comments);
+export default async function PostPage(context) {
+    const { data } = await getData(context.params?.id);
+    const comments = JSON.parse(data.attributes?.comments);
+
     return(
       <>
           <title>{ data.attributes.title }</title>
           <meta content="width=device-width, initial-scale=1" name="viewport" />
           <meta name="description" content="Welcome ClubGameFi.com. ClubGameFi is a gamer blog. I play Pixel Gun 3d and other games" />
-          <link rel="icon" href="/favicon.ico" />
+          <link rel="icon" href="/public/favicon.ico" />
 
           <main className="bg-grey pt-50 pb-50">
               <div className="pb-50">
@@ -32,8 +42,8 @@ export default async function PostPage({params}) {
                                           <div className="col-md-6">
                                               <div className="entry-meta align-items-center meta-2 font-small color-muted">
                                                   <p className="mb-5">
-                                                      <a className="author-avatar" href="#"><img className="img-circle" src="/imgs/authors/oguz.jpg" alt="" /></a>
-                                                      By <a href="#">
+                                                      <a className="author-avatar" href="@/app/post/page#"><img className="img-circle" src="/imgs/authors/oguz.jpg" alt="" /></a>
+                                                      By <a href="@/app/post/page#">
                                                       <span className="author-name font-weight-bold">
                                                       Oguz</span></a>
                                                   </p>
@@ -45,9 +55,9 @@ export default async function PostPage({params}) {
                                           <div className="col-md-6 text-right d-none d-md-inline">
                                               <ul className="header-social-network d-inline-block list-inline mr-15">
                                                   <li className="list-inline-item text-muted"><span>Share this: </span></li>
-                                                  <li className="list-inline-item"><a className="social-icon fb text-xs-center" target="_blank" href="#"><i className="elegant-icon social_facebook" /></a></li>
-                                                  <li className="list-inline-item"><a className="social-icon tw text-xs-center" target="_blank" href="#"><i className="elegant-icon social_twitter " /></a></li>
-                                                  <li className="list-inline-item"><a className="social-icon pt text-xs-center" target="_blank" href="#"><i className="elegant-icon social_pinterest " /></a></li>
+                                                  <li className="list-inline-item"><a className="social-icon fb text-xs-center" target="_blank" href="@/app/post/page#"><i className="elegant-icon social_facebook" /></a></li>
+                                                  <li className="list-inline-item"><a className="social-icon tw text-xs-center" target="_blank" href="@/app/post/page#"><i className="elegant-icon social_twitter " /></a></li>
+                                                  <li className="list-inline-item"><a className="social-icon pt text-xs-center" target="_blank" href="@/app/post/page#"><i className="elegant-icon social_pinterest " /></a></li>
                                               </ul>
                                           </div>
                                       </div>
@@ -81,18 +91,18 @@ export default async function PostPage({params}) {
 
                                           <ul className="header-social-network d-inline-block list-inline float-md-right mt-md-0 mt-4">
                                               <li className="list-inline-item text-muted"><span>Share this: </span></li>
-                                              <li className="list-inline-item"><a className="social-icon fb text-xs-center" target="_blank" href="#"><i className="elegant-icon social_facebook" /></a></li>
-                                              <li className="list-inline-item"><a className="social-icon tw text-xs-center" target="_blank" href="#"><i className="elegant-icon social_twitter " /></a></li>
-                                              <li className="list-inline-item"><a className="social-icon pt text-xs-center" target="_blank" href="#"><i className="elegant-icon social_pinterest " /></a></li>
+                                              <li className="list-inline-item"><a className="social-icon fb text-xs-center" target="_blank" href="@/app/post/page#"><i className="elegant-icon social_facebook" /></a></li>
+                                              <li className="list-inline-item"><a className="social-icon tw text-xs-center" target="_blank" href="@/app/post/page#"><i className="elegant-icon social_twitter " /></a></li>
+                                              <li className="list-inline-item"><a className="social-icon pt text-xs-center" target="_blank" href="@/app/post/page#"><i className="elegant-icon social_pinterest " /></a></li>
                                           </ul>
                                       </div>
                                       {/*author box*/}
                                       <div className="author-bio p-30 mt-50 border-radius-10 bg-white wow fadeIn animated">
                                           <div className="author-image mb-30">
-                                              <a href="#"><img src="/imgs/authors/oguz.jpg" alt="" className="avatar" /></a>
+                                              <a href="@/app/post/page#"><img src="/imgs/authors/oguz.jpg" alt="" className="avatar" /></a>
                                           </div>
                                           <div className="author-info">
-                                              <h4 className="font-weight-bold mb-20"><span className="vcard author"><span className="fn"><a href="#" title="Posted by Barbara Cartland" rel="author">Oguz</a></span></span>
+                                              <h4 className="font-weight-bold mb-20"><span className="vcard author"><span className="fn"><a href="@/app/post/page#" title="Posted by Barbara Cartland" rel="author">Oguz</a></span></span>
                                               </h4>
                                               <h5 className="text-muted">About author</h5>
                                               <div className="author-description text-muted">
@@ -124,12 +134,12 @@ export default async function PostPage({params}) {
                                                               <div className="d-flex justify-content-between">
                                                                   <div className="d-flex align-items-center">
                                                                       <h5>
-                                                                          <a href="#">  { comment.attributes.name } </a>
+                                                                          <a href="@/app/post/page#">  { comment.attributes.name } </a>
                                                                       </h5>
                                                                       <p className="date"> { comment.attributes.created_at } </p>
                                                                   </div>
                                                                   <div className="reply-btn">
-                                                                      <a href="#" className="btn-reply"> Reply</a>
+                                                                      <a href="@/app/post/page#" className="btn-reply"> Reply</a>
                                                                   </div>
                                                               </div>
                                                           </div>

@@ -1,10 +1,20 @@
 import Link from "next/link";
 import Pagination from './pagination'
 
-const getCategoryData = async (categorySlug, page) => {
+const getCategoryData = async (categorySlug, page= 1) => {
     //const res = await fetch(`http://localhost:3001/api/v1/get_by_category/` + categorySlug + `?page=${page}` );
     const res = await fetch(`http://127.0.0.1:3001/api/v1/get_by_category/` + categorySlug + `?page=${page}` );
     return res.json();
+}
+
+export async function getStaticPaths() {
+    const res = await fetch('http://127.0.0.1:3001/api/v1/post_categories');
+    const { data } = await res.json();
+
+    return {
+        paths: data.map((post) => ({ params: { id: post.attributes?.slug } })),
+        fallback: false
+    }
 }
 
 export default async function Home(props) {
@@ -26,10 +36,10 @@ export default async function Home(props) {
                                                           <Link  className="img-link"  href={`post/${c.attributes.slug}`}></Link>
                                                       </div>
                                                       <ul className="social-share">
-                                                          <li><a href="#"><i className="elegant-icon social_share" /></a></li>
-                                                          <li><a className="fb" href="#" title="Share on Facebook" target="_blank"><i className="elegant-icon social_facebook" /></a></li>
-                                                          <li><a className="tw" href="#" target="_blank" title="Tweet now"><i className="elegant-icon social_twitter" /></a></li>
-                                                          <li><a className="pt" href="#" target="_blank" title="Pin it"><i className="elegant-icon social_pinterest" /></a></li>
+                                                          <li><a href="@/public/category/[id]/page#"><i className="elegant-icon social_share" /></a></li>
+                                                          <li><a className="fb" href="@/public/category/[id]/page#" title="Share on Facebook" target="_blank"><i className="elegant-icon social_facebook" /></a></li>
+                                                          <li><a className="tw" href="@/public/category/[id]/page#" target="_blank" title="Tweet now"><i className="elegant-icon social_twitter" /></a></li>
+                                                          <li><a className="pt" href="@/public/category/[id]/page#" target="_blank" title="Pin it"><i className="elegant-icon social_pinterest" /></a></li>
                                                       </ul>
                                                   </div>
                                               </div>
