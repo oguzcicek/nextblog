@@ -1,5 +1,6 @@
 import Link from "next/link";
 import Pagination from "@/app/pagination";
+import Image from 'next/image'
 
 const getData = async (page = 1) => {
     //const res = await fetch(`http://localhost:3001/api/v1/posts?page=${page}`);
@@ -119,12 +120,16 @@ export default async function Home(props) {
                                                 <div className="row mb-40 list-style-2">
                                                     <div className="col-md-4">
                                                         <div className="post-thumb position-relative border-radius-5">
-                                                            <div
-                                                                className="img-hover-slide border-radius-5 position-relative"
-                                                                style={{backgroundImage: "url(" + c.attributes.image + ")"}}>
-                                                                <Link className="img-link"
-                                                                      href={`post/${c.attributes.slug}`}></Link>
-                                                            </div>
+                                                            <Link href={`post/${c.attributes.slug}`}>
+                                                                <Image
+                                                                    className="img-hover-slide border-radius-5 position-relative"
+                                                                    src={ c.attributes.image }
+                                                                    alt="Picture of the author"
+                                                                    layout='fill'
+                                                                    objectFit='contain'
+                                                                />
+                                                            </Link>
+
                                                             <ul className="social-share">
                                                                 <li><a href="#"><i
                                                                     className="elegant-icon social_share"/></a></li>
