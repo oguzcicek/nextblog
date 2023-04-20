@@ -1,5 +1,6 @@
 import Link from "next/link";
 import Pagination from './pagination'
+import Image from "next/image";
 
 const getGameData = async (gameSlug, page= 1) => {
     //const res = await fetch(`http://localhost:3001/api/v1/get_by_game/` + gameSlug + `?page=${page}` );
@@ -32,9 +33,15 @@ export default async function Home(props) {
                                           <div className="row mb-40 list-style-2">
                                               <div className="col-md-4">
                                                   <div className="post-thumb position-relative border-radius-5">
-                                                      <div className="img-hover-slide border-radius-5 position-relative" style={{backgroundImage: "url(" + c.attributes.image + ")" }} >
-                                                          <Link  className="img-link"  href={`post/${c.attributes.slug}`}></Link>
-                                                      </div>
+                                                      <Link href={`post/${c.attributes.slug}`}>
+                                                          <Image
+                                                              className="img-hover-slide border-radius-5 position-relative"
+                                                              src={ c.attributes.image }
+                                                              alt="Picture of the author"
+                                                              layout='fill'
+                                                              objectFit='contain'
+                                                          />
+                                                      </Link>
                                                       <ul className="social-share">
                                                           <li><a href="@/public/games/[id]/page#"><i className="elegant-icon social_share" /></a></li>
                                                           <li><a className="fb" href="@/public/games/[id]/page#" title="Share on Facebook" target="_blank"><i className="elegant-icon social_facebook" /></a></li>
