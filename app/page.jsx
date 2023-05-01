@@ -15,6 +15,7 @@ export default async function Home(props) {
         <>
             <title>Another Gamer Blog | ClubGameFi</title>
             <meta content="width=device-width, initial-scale=1" name="viewport"/>
+            <meta name="google-site-verification" content="RSLgbDctd7SAhapzOTIUug1g-glFxjd0Q9C7k5bOofg" />
             <meta name="description"
                   content="Welcome ClubGameFi.com. ClubGameFi is a gamer blog. I play Pixel Gun 3d and other games"/>
             <link rel="icon" href="/favicon.ico"/>
