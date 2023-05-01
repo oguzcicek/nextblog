@@ -1,7 +1,6 @@
 import Link from "next/link";
 import Pagination from "@/app/pagination";
 import Image from 'next/image'
-import Head from "next/head";
 
 const getData = async (page = 1) => {
     //const res = await fetch(`http://localhost:3001/api/v1/posts?page=${page}`);
@@ -14,9 +13,6 @@ export default async function Home(props) {
 
     return (
         <>
-            <Head>
-                <meta name="google-site-verification" content="RSLgbDctd7SAhapzOTIUug1g-glFxjd0Q9C7k5bOofg" />
-            </Head>
             <title>Another Gamer Blog | ClubGameFi</title>
             <meta content="width=device-width, initial-scale=1" name="viewport"/>
             <meta name="description"
