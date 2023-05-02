@@ -1,8 +1,12 @@
 import Link from 'next/link'
+import Head from "next/head";
 
 const Header = () => {
 
 	return <div>
+		<Head>
+			<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+		</Head>
 		<div className="scroll-progress primary-bg"></div>
 		<header className="main-header header-style-1 font-heading">
 			<div className="header-top">
@@ -153,6 +157,9 @@ const Header = () => {
 				</div>
 			</div>
 		</div>
+
+
+
 	</div>
 };
 

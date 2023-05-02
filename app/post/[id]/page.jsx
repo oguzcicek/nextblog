@@ -1,5 +1,6 @@
 import Image from 'next/image'
 import AddComment from "./add-comment";
+import MyAdsense from "@/components/MyAdsense";
 
 export async function getStaticPaths() {
     const res = await fetch('http://127.0.0.1:3001/api/v1/posts');
@@ -160,11 +161,7 @@ export default async function PostPage(context) {
                           <div className="col-lg-4 primary-sidebar sticky-sidebar">
                               <div className="widget-area">
                                   <div className="sidebar-widget widget-about mb-50 pt-30 pr-30 pb-30 pl-30 bg-white border-radius-5 has-border  wow fadeInUp animated">
-                                      <img className="about-author-img mb-25" src="/imgs/authors/oguz.jpg" alt="author image" />
-                                      <h5 className="mb-20">Hello, I'm Oguz.</h5>
-                                      <p className="font-medium text-muted">
-                                          Hi, I'm Oğuz. I've been playing games in various genres for years. In this blog, I aim to share information and news about the games I play.
-                                      </p>
+                                      <MyAdsense />
                                   </div>
                                   <div className="sidebar-widget widget-latest-posts mb-50 wow fadeInUp animated">
                                       <div className="widget-header-1 position-relative mb-30">
