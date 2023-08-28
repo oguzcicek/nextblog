@@ -75,7 +75,7 @@ export default async function PostPage(context) {
                                   </figure>
                                   {/*figure*/}
                                   <article className="entry-wraper mb-50">
-                                      <p className="font-medium"> <span className="font-weight-bold">This article updated on:</span> { data.attributes.created_at }</p>
+                                      <p className="font-medium"> <span className="font-weight-bold">This article updated on:</span> { data.attributes.updated_at }</p>
                                       <div className="entry-main-content wow fadeIn animated">
                                           <div dangerouslySetInnerHTML={{__html: data.attributes.content  }}>
                                           </div>
