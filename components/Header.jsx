@@ -69,7 +69,9 @@ const Header = () => {
 					<div className="clearfix"></div>
 				</div>
 			</div>
-			<MyAdsense />
+			<div className="container">
+				<MyAdsense />
+			</div>
 		</header>
 		<div className="main-search-form">
 			<div className="container">
