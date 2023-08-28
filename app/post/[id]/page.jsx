@@ -48,7 +48,7 @@ export default async function PostPage(context) {
                                                       <span className="author-name font-weight-bold">
                                                       Oguz</span></a>
                                                   </p>
-                                                  <span className="mr-10"> { data.attributes.created_at }</span>
+                                                  <span className="mr-10"> <span className="font-weight-bold">Last Update:</span> { data.attributes.updated_at }</span>
                                                   <span className="has-dot font-weight-bold"> { data.attributes.category_name }</span>
                                                   <span className="has-dot font-weight-bold"> { data.attributes.game_name }</span>
                                               </div>
