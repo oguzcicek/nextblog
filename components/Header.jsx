@@ -1,11 +1,11 @@
 import Link from 'next/link'
 import Head from "next/head";
+import MyAdsense from "@/components/MyAdsense";
 
 const Header = () => {
 
 	return <div>
 		<Head>
-			<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
 		</Head>
 		<div className="scroll-progress primary-bg"></div>
 		<header className="main-header header-style-1 font-heading">
@@ -69,6 +69,7 @@ const Header = () => {
 					<div className="clearfix"></div>
 				</div>
 			</div>
+			<MyAdsense />
 		</header>
 		<div className="main-search-form">
 			<div className="container">

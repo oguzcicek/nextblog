@@ -18,7 +18,7 @@ export default async function Home(props) {
             <title>Another Gamer Blog | ClubGameFi2</title>
             <meta content="width=device-width, initial-scale=1" name="viewport"/>
             <meta name="description"
-                  content="Welcome ClubGameFi.com. ClubGameFi is a gamer blog. I play Pixel Gun 3d and other games"/>
+                  content="Welcome ClubGameFi.com. ClubGameFi is a gamer blog. I play Pixel Gun 3d, Coin Master and other games"/>
             <link rel="icon" href="/favicon.ico"/>
 
             <main>
@@ -46,14 +46,7 @@ export default async function Home(props) {
                                     <h5 className="suggested font-heading mb-20 text-muted"><strong>Suggested
                                         keywords:</strong></h5>
                                     <ul className="list-inline d-inline-block">
-                                        <li className="list-inline-item"><a href="category.html.htm">World</a></li>
-                                        <li className="list-inline-item"><a href="category.html.htm">American</a></li>
-                                        <li className="list-inline-item"><a href="category.html.htm">Opinion</a></li>
-                                        <li className="list-inline-item"><a href="category.html.htm">Tech</a></li>
-                                        <li className="list-inline-item"><a href="category.html.htm">Science</a></li>
-                                        <li className="list-inline-item"><a href="category.html.htm">Books</a></li>
-                                        <li className="list-inline-item"><a href="category.html.htm">Travel</a></li>
-                                        <li className="list-inline-item"><a href="category.html.htm">Business</a></li>
+                                        <li className="list-inline-item"><a href="#">World</a></li>
                                     </ul>
                                 </div>
                             </div>
@@ -63,12 +56,12 @@ export default async function Home(props) {
                                         className="d-flex bg-grey has-border p-25 hover-up-2 transition-normal border-radius-5 mb-30">
                                         <div
                                             className="post-thumb post-thumb-64 d-flex mr-15 border-radius-5 img-hover-scale overflow-hidden">
-                                            <a className="color-white" href="single.html.htm">
+                                            <a className="color-white" href="#">
                                                 <img src="assets/imgs/news/thumb-2.jpg" alt=""/>
                                             </a>
                                         </div>
                                         <div className="post-content media-body">
-                                            <h6><a href="category.html.htm">Travel Tips</a></h6>
+                                            <h6><a href="#">--</a></h6>
                                             <p className="text-muted font-small">Lorem ipsum dolor sit amet, consectetur
                                                 adipiscing elit.</p>
                                         </div>
@@ -79,12 +72,12 @@ export default async function Home(props) {
                                         className="d-flex bg-grey has-border p-25 hover-up-2 transition-normal border-radius-5 mb-30">
                                         <div
                                             className="post-thumb post-thumb-64 d-flex mr-15 border-radius-5 img-hover-scale overflow-hidden">
-                                            <a className="color-white" href="single.html.htm">
+                                            <a className="color-white" href="#">
                                                 <img src="assets/imgs/news/thumb-4.jpg" alt=""/>
                                             </a>
                                         </div>
                                         <div className="post-content media-body">
-                                            <h6><a href="category.html.htm">Lifestyle</a></h6>
+                                            <h6><a href="#">Lifestyle</a></h6>
                                             <p className="text-muted font-small">Lorem ipsum dolor sit amet, consectetur
                                                 adipiscing elit.</p>
                                         </div>
@@ -95,12 +88,12 @@ export default async function Home(props) {
                                         className="d-flex bg-grey has-border p-25 hover-up-2 transition-normal border-radius-5 mb-30">
                                         <div
                                             className="post-thumb post-thumb-64 d-flex mr-15 border-radius-5 img-hover-scale overflow-hidden">
-                                            <a className="color-white" href="single.html.htm">
+                                            <a className="color-white" href="#">
                                                 <img src="assets/imgs/news/thumb-3.jpg" alt=""/>
                                             </a>
                                         </div>
                                         <div className="post-content media-body">
-                                            <h6><a href="category.html.htm">Hotel Review</a></h6>
+                                            <h6><a href="#">Mobile Games</a></h6>
                                             <p className="text-muted font-small">Lorem ipsum dolor sit amet, consectetur
                                                 adipiscing elit.</p>
                                         </div>

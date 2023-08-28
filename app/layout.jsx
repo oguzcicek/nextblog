@@ -24,6 +24,11 @@ export default function RootLayout({ children }) {
           gtag('config', 'G-6ED6SLF9ZR');
         `}
       </Script>
+      <Script
+          async
+          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"
+          strategy="afterInteractive"
+      />
       <body>
       <Header />
       {children}
