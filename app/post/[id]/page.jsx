@@ -48,9 +48,9 @@ export default async function PostPage(context) {
                                                       <span className="author-name font-weight-bold">
                                                       Oguz</span></a>
                                                   </p>
-                                                  <span className="mr-10"> <span className="font-weight-bold">Last Update:</span> { data.attributes.updated_at }</span>
+                                                  <span className="mr-10">{ data.attributes.created_at }</span>
                                                   <span className="has-dot font-weight-bold"> { data.attributes.category_name }</span>
-                                                  <span className="has-dot font-weight-bold"> { data.attributes.game_name }</span>
+                                                  <span className="has-dot font-weight-bold"> { data.attributes.game_name } ASDSADa</span>
                                               </div>
                                           </div>
                                           <div className="col-md-6 text-right d-none d-md-inline">
@@ -75,6 +75,7 @@ export default async function PostPage(context) {
                                   </figure>
                                   {/*figure*/}
                                   <article className="entry-wraper mb-50">
+                                      <p className="font-medium"> <span className="font-weight-bold">This article updated on:</span> { data.attributes.created_at }</p>
                                       <div className="entry-main-content wow fadeIn animated">
                                           <div dangerouslySetInnerHTML={{__html: data.attributes.content  }}>
                                           </div>
