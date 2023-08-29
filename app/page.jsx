@@ -155,7 +155,7 @@ export default async function Home(props) {
                                                             <div
                                                                 className="entry-meta meta-1 float-left font-x-small text-uppercase">
                                                                 <span
-                                                                    className="post-on"> {c.attributes.created_at} </span>
+                                                                    className="post-on"> {c.attributes.updated_at} </span>
                                                                 <span className="post-by has-dot">by Oguz</span>
                                                             </div>
                                                         </div>

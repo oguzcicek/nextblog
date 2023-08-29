@@ -50,7 +50,7 @@ export default async function PostPage(context) {
                                                   </p>
                                                   <span className="mr-10">{ data.attributes.created_at }</span>
                                                   <span className="has-dot font-weight-bold"> { data.attributes.category_name }</span>
-                                                  <span className="has-dot font-weight-bold"> { data.attributes.game_name } ASDSADa</span>
+                                                  <span className="has-dot font-weight-bold"> { data.attributes.game_name } </span>
                                               </div>
                                           </div>
                                           <div className="col-md-6 text-right d-none d-md-inline">
