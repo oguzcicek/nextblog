@@ -7,7 +7,9 @@ import Script from "next/script";
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests" />
+      <head>
+        <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests" />
+      </head>
       {/*
         <head /> will contain the components returned by the nearest parent
         head.jsx. Find out more at https://beta.nextjs.org/docs/api-reference/file-conventions/head
