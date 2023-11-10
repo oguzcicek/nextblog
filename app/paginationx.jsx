@@ -14,7 +14,7 @@ export default function Pagination({meta }){
     const pagginationHandler = (page) => {
         //const currentPath = pathname;
         const currentQuery = query;
-        console.log(page.selected)
+        //console.log(page.selected)
         //alert(page.selected)
         currentQuery.page = page.selected + 1;
         //alert(currentQuery.page)
