@@ -20,7 +20,7 @@ export default function AddComment( { postId } ){
                 setFormSuccessMessage('Thank you for your comment! It will be shown after approved!')
             }
             resetForm()
-        }).catch((err) => {/* handle failure */});
+        }).catch((err) => { console.log(err)});
     }
 
     const DEFAULT_DATA = { name: "", email: "", comment: "" }
