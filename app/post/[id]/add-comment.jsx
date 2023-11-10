@@ -10,6 +10,7 @@ export default function AddComment( { postId } ){
       //  fetch(`http://localhost:3001/api/v1/posts/${postId}/post_comments`, {
         fetch(`http://admin.clubgamefi.com/api/v1/posts/${postId}/post_comments`, {
             method: "POST",
+            referrerPolicy: "unsafe_url" ,
             headers: {
                 "Content-Type": "application/json",
             },
