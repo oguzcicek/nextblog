@@ -12,7 +12,10 @@ export default function AddComment( { postId } ){
             method: "POST",
             headers: {
                 'Accept': 'application/json',
-                "content-Type": "application/json",
+                "Content-Type": "application/json",
+                'Access-Control-Allow-Origin': '*',
+                'Access-Control-Allow-Methods': 'POST',
+                'Access-Control-Allow-Headers': 'Content-Type'
             },
             body: JSON.stringify(form)
         }).then((res) => {
