@@ -7,7 +7,7 @@ export default function AddComment( { postId } ){
 
     const submitComment = (e) => {
         e.preventDefault();
-     fetch(`http://127.0.0.1:3001/api/v1/posts/${postId}/post_comments`, {
+     fetch(`http://127.0.0.1:3001/api/v1/posts/${postId}/post_comments/`, {
      // fetch(`http://admin.clubgamefi.com/api/v1/posts/${postId}/post_comments`, {
             method: "POST",
             headers: {
@@ -15,8 +15,7 @@ export default function AddComment( { postId } ){
                 "Content-Type": "application/json",
                 "Access-Control-Allow-Origin": "*",
                 "Access-Control-Allow-Methods": "GET, POST, PUT, DELETE, OPTIONS",
-                "Access-Control-Allow-Headers":
-                "Content-Type, Authorization, X-CSRF-Token, X-Requested-With, Accept, Accept-Version, Content-Length, Content-MD5, Date, X-Api-Version",
+                "Access-Control-Allow-Headers": "*",
             },
             body: JSON.stringify(form)
         }).then((res) => {
