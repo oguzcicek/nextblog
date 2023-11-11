@@ -16,7 +16,6 @@ export default function AddComment( { postId } ){
             body: JSON.stringify(form)
         }).then((res) => {
             console.log(form)
-            console.log(JSON.stringify(form))
             if (res.status === 200) {
                 setFormSuccess(true)
                 setFormSuccessMessage('Thank you for your comment! It will be shown after approved!')
