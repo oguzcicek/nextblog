@@ -7,7 +7,7 @@ export default function AddComment( { postId } ){
 
     const submitComment = (e) => {
         e.preventDefault();
-        fetch(`http://127.0.0.1:3001/api/v1/posts/${postId}/post_comments`, {
+        fetch(`localhost:3001/api/v1/posts/${postId}/post_comments`, {
             method: "POST",
             headers: {
                 "Content-Type": "application/json",
