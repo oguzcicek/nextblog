@@ -7,8 +7,7 @@ export default function AddComment( { postId } ){
 
     const submitComment = (e) => {
         e.preventDefault();
-    fetch(`http://127.0.0.1:3001/api/v1/posts/${postId}/post_comments`, {
-   //   fetch(`http://admin.clubgamefi.com/api/v1/posts/${postId}/post_comments`, {
+        fetch(`http://127.0.0.1:3001/api/v1/posts/${postId}/post_comments`, {
             method: "POST",
             headers: {
                 "Content-Type": "application/json",
@@ -19,8 +18,11 @@ export default function AddComment( { postId } ){
                 setFormSuccess(true)
                 setFormSuccessMessage('Thank you for your comment! It will be shown after approved!')
             }
+            console.log(res)
             resetForm()
-        }).catch((err) => { console.log(err)});
+        }).catch((err) => { 
+            console.log(err)}
+            );
     }
 
     const DEFAULT_DATA = { name: "", email: "", comment: "" }
