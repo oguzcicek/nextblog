@@ -11,7 +11,7 @@
   "dependencies": {
     "@ctrl/react-adsense": "^1.7.0",
     "@next/font": "13.4",
-    "next": "13.4",
+    "next": "13.4.12",
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "react-paginate": "^8.1.4"
