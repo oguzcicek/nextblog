@@ -11,6 +11,7 @@ export default function AddComment( { postId } ){
      // fetch(`http://admin.clubgamefi.com/api/v1/posts/${postId}/post_comments`, {
             method: "POST",
             headers: {
+                'Accept': 'application/json',
                 "content-Type": "application/json",
             },
             body: JSON.stringify(form)
