@@ -33,7 +33,7 @@ export default async function Home(props) {
                                           <div className="row mb-40 list-style-2">
                                               <div className="col-md-4">
                                                   <div className="post-thumb position-relative border-radius-5">
-                                                      <Link href={`post/${c.attributes.slug}`}>
+                                                      <Link href={`/post/${c.attributes.slug}`}>
                                                           <Image
                                                               className="img-hover-slide border-radius-5 position-relative"
                                                               src={ c.attributes.image }
@@ -58,7 +58,7 @@ export default async function Home(props) {
                                                           </Link>
                                                       </div>
                                                       <h5 className="post-title font-weight-900 mb-20">
-                                                          <Link href={`post/${c.attributes.slug}`}>{c.attributes.title}</Link>
+                                                          <Link href={`/post/${c.attributes.slug}`}>{c.attributes.title}</Link>
                                                       </h5>
                                                       <div className="entry-meta meta-1 float-left font-x-small text-uppercase">
                                                           <span className="post-on"> { c.attributes.created_at } </span>

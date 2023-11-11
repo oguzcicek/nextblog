@@ -1,7 +1,6 @@
 import Link from "next/link";
 import Pagination from "@/app/pagination";
 import Image from 'next/image'
-import Head from "next/head";
 
 const getData = async (page = 1) => {
     //const res = await fetch(`http://localhost:3001/api/v1/posts?page=${page}`);

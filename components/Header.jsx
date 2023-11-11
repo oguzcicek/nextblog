@@ -36,7 +36,7 @@ const Header = () => {
 									</Link>
 								</li>
 								<li>
-									<Link href={'games/pixel-gun-3d'}>
+									<Link href={'/games/pixel-gun-3d'}>
 										Pixel Gun 3D
 									</Link>
 								</li>
