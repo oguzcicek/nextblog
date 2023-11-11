@@ -11,10 +11,12 @@ export default function AddComment( { postId } ){
      // fetch(`http://admin.clubgamefi.com/api/v1/posts/${postId}/post_comments`, {
             method: "POST",
             headers: {
-                "Content-Type": "application/json",
+                "content-Type": "application/json",
             },
             body: JSON.stringify(form)
         }).then((res) => {
+            console.log(form)
+            console.log(JSON.stringify(form))
             if (res.status === 200) {
                 setFormSuccess(true)
                 setFormSuccessMessage('Thank you for your comment! It will be shown after approved!')
