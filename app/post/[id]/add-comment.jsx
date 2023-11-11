@@ -7,7 +7,8 @@ export default function AddComment( { postId } ){
 
     const submitComment = (e) => {
         e.preventDefault();
-       
+        headers.append('Access-Control-Allow-Origin', 'http://localhost:3001');
+        headers.append('Access-Control-Allow-Credentials', 'true');
      fetch(`http://127.0.0.1:3001/api/v1/posts/${postId}/post_comments`, {
      // fetch(`http://admin.clubgamefi.com/api/v1/posts/${postId}/post_comments`, {
             method: "POST",
